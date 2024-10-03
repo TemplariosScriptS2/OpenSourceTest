@@ -1,0 +1,197 @@
+local Players = game:GetService("Players")
+local workspace = game:GetService("Workspace")
+
+for _, player in pairs(Players:GetPlayers()) do
+    local carName = player.Name .. "Car"
+
+    -- Verificação e destruição de cada parte
+    local partsToDelete = {
+        -- Partes anteriores
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("DarkGray"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[19],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("MeshPart"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("White"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[26],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[44],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Floor"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Color")
+            and workspace.Vehicles[carName].Body.BodyPanels.Color:FindFirstChild("MainBoat"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Wall"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Color")
+            and workspace.Vehicles[carName].Body.BodyPanels.Color:FindFirstChild("Color"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Wood"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("MainWhite"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Stairs"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[25],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[51],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[52],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[20],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[31],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[37],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:GetChildren()[49],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("FakeFloor"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Grey"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Black"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Part"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("Brown"),
+
+        -- Novas partes adicionadas
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels.Color:FindFirstChild("RobloxCylinderMesh"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("Trailer")
+            and workspace.Vehicles[carName].Body.Trailer:FindFirstChild("TrailerChassis")
+            and workspace.Vehicles[carName].Body.Trailer.TrailerChassis:GetChildren()[12],
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("ClearCollide"),
+
+        workspace:FindFirstChild("Vehicles")
+            and workspace.Vehicles:FindFirstChild(carName)
+            and workspace.Vehicles[carName]:FindFirstChild("Body")
+            and workspace.Vehicles[carName].Body:FindFirstChild("BodyPanels")
+            and workspace.Vehicles[carName].Body.BodyPanels:FindFirstChild("ModelMove2")
+            and workspace.Vehicles[carName].Body.BodyPanels.ModelMove2:FindFirstChild("MovePart2")  -- Adicionada esta linha
+    }
+
+    -- Iterar e deletar cada parte
+    for _, part in pairs(partsToDelete) do
+        if part then
+            part:Destroy()
+            print("Parte deletada com sucesso para o jogador: " .. player.Name)
+        end
+    end
+end
